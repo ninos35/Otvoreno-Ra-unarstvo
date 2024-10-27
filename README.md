@@ -9,7 +9,7 @@
   + Postanski broj
   + Grad
   + Drzava
-  + Soba - veza roditelj-dijete, svaka soba ima određen broj osoba (jedna ili dvije osobe) te cijenu u €
   + Broj zvjezdica
   + Telefon
   + Email
+  + Soba - veza roditelj-dijete, svaka soba ima određen broj osoba (jedna ili dvije osobe) te cijenu u €
