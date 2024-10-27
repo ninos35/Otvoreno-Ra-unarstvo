@@ -10,10 +10,10 @@
   + Postanski broj
   + Grad
   + Drzava
+  + Soba - veza roditelj-dijete, svaka soba ima određen broj osoba (jedna ili dvije osobe) te cijenu u €
   + Broj zvjezdica
   + Telefon
   + Email
-  + Soba - veza roditelj-dijete, svaka soba ima određen broj osoba (jedna ili dvije osobe) te cijenu u €
 - podaci o hotelima su u obliku CSV i JSON
 - u skupu su podaci o 10 hotela
 - uzeti su podaci nekih nasumično odabranih hotela iz Zagreba, Osijeka, Splita i Vodica
