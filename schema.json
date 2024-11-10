@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "hoteli.json",
+    "type": "array",
+    "title": "Hoteli",
+    "description": "Skup hotela za kolegij otvoreno računarstvo.",
+    "items": {
+        "type":"object",
+        "title": "Hotel",
+        "description": "Objekt koji sadrži podatke o jednom hotelu.",
+        "required": [
+            "ImeHotela",
+            "Ulica",
+            "KucniBroj",
+            "PostanskiBroj",
+            "Grad",
+            "Drzava",
+            "Soba",
+            "BrojZvjezdica",
+            "Telefon",
+            "Email"
+        ],
+        "properties": {"ImeHotela":{
+            "type":"string",
+            "title": "ImeHotela",
+            "description": "Ime hotela."
+        },
+        "Ulica":{
+            "type":"string",
+            "title": "Ulica",
+            "description": "Naziv ulice."
+        },
+        "KucniBroj":{
+            "type":"integer",
+            "title": "ImeHotela",
+            "description": "Kucni broj hotela."
+        },
+        "PostanskiBroj":{
+            "type":"string",
+            "title": "PostanskiBroj",
+            "description": "Poštanski broj hotela."
+        },
+        "Grad":{
+            "type":"string",
+            "title": "Grad",
+            "description": "Grad hotela."
+        },
+        "Drzava":{
+            "type":"string",
+            "title": "Drzava",
+            "description": "Država hotela."
+        },
+        "Soba":{
+            "type":"array",
+            "title": "Soba",
+            "description": "Objekt koji sadrži podatke o sobi.",
+            "required": ["brojOsoba","Cijena"],
+            "properties": {
+                "brojOsoba":{
+                    "type":"string"
+                },
+                "Cijena":{
+                    "type":"number"
+                }
+            }
+        },
+        "BrojZvjezdica":{
+            "type":"integer",
+            "title": "BrojZvjezdica",
+            "description": "Broj zvjezdica hotela."
+        },
+        "Telefon":{
+            "type":"string",
+            "title": "Telefon",
+            "description": "Broj telefona hotela."
+        },
+        "Email":{
+            "type":"string",
+            "title": "Email",
+            "description": "Kontakt email hotela."
+        }
+    }
+    }
+}
