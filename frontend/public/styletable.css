@@ -1,0 +1,33 @@
+#myTable{
+    background-color: rgba(93, 173, 226, 0.2);
+}
+body{
+    background-color: lightgray;
+}
+
+#pogledaj{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+#gumb{
+    height: 50px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+#gumblink{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+.dt-search{
+    display: none;
+}
+#filterType{
+    background-color: cornflowerblue;
+}
+#searchInput{
+    background-color: rgb(117, 161, 242);
+}
+

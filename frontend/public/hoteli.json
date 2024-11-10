@@ -1,0 +1,212 @@
+[
+    {
+        "ImeHotela": "Hotel Osijek",
+        "Ulica": "Šamačka",
+        "KucniBroj": 4,
+        "PostanskiBroj": "31000",
+        "Grad": "Osijek",
+        "Drzava": "Hrvatska",
+        "Soba": [
+            {
+                "brojOsoba": "Jedna osoba",
+                "Cijena": 119.46
+            },
+            {
+                "brojOsoba": "Dvije osobe",
+                "Cijena": 178.92
+            }
+        ],
+        "BrojZvjezdica": 4,
+        "Telefon": "+38531230333",
+        "Email": "info@hotelosijek.hr"
+    },
+    {
+        "ImeHotela": "Hotel Luxe Split",
+        "Ulica": "Ul.kralja Zvonimira",
+        "KucniBroj": 6,
+        "PostanskiBroj": "21000",
+        "Grad": "Split",
+        "Drzava": "Hrvatska",
+        "Soba": [
+            {
+                "brojOsoba": "Jedna osoba",
+                "Cijena": 126.86
+            },
+            {
+                "brojOsoba": "Dvije osobe",
+                "Cijena": 153.72
+            }
+        ],
+        "BrojZvjezdica": 4,
+        "Telefon": "+38521314444",
+        "Email": "reservations@hotelluxesplit.com"
+    },
+    {
+        "ImeHotela": "Hotel Olympia",
+        "Ulica": "Ljudevita Gaja",
+        "KucniBroj": 6,
+        "PostanskiBroj": "22211",
+        "Grad": "Vodice",
+        "Drzava": "Hrvatska",
+        "Soba": [
+            {
+                "brojOsoba": "Jedna osoba",
+                "Cijena": 100.8
+            },
+            {
+                "brojOsoba": "Dvije osobe",
+                "Cijena": 174.6
+            }
+        ],
+        "BrojZvjezdica": 4,
+        "Telefon": "+38522452452",
+        "Email": "recepcija@olympiavodice.hr"
+    },
+    {
+        "ImeHotela": "Admiral Hotel",
+        "Ulica": "Rudeška Cesta",
+        "KucniBroj": 140,
+        "PostanskiBroj": "10000",
+        "Grad": "Zagreb",
+        "Drzava": "Hrvatska",
+        "Soba": [
+            {
+                "brojOsoba": "Jedna osoba",
+                "Cijena": 121.59
+            },
+            {
+                "brojOsoba": "Dvije osobe",
+                "Cijena": 123.18
+            }
+        ],
+        "BrojZvjezdica": 4,
+        "Telefon": "+38513322900",
+        "Email": "info@admiralhotel.hr"
+    },
+    {
+        "ImeHotela": "Hotel Split Inn by President",
+        "Ulica": "4. Gardijske Brigade",
+        "KucniBroj": 55,
+        "PostanskiBroj": "21000",
+        "Grad": "Split",
+        "Drzava": "Hrvatska",
+        "Soba": [
+            {
+                "brojOsoba": "Jedna osoba",
+                "Cijena": 113.86
+            },
+            {
+                "brojOsoba": "Dvije osobe",
+                "Cijena": 147.72
+            }
+        ],
+        "BrojZvjezdica": 4,
+        "Telefon": "+38521444230",
+        "Email": "splitinn@hotelpresident.hr"
+    },
+    {
+        "ImeHotela": "Hotel Olympia Sky",
+        "Ulica": "Ljudevita Gaja",
+        "KucniBroj": 6,
+        "PostanskiBroj": "22211",
+        "Grad": "Vodice",
+        "Drzava": "Hrvatska",
+        "Soba": [
+            {
+                "brojOsoba": "Jedna osoba",
+                "Cijena": 118.59
+            },
+            {
+                "brojOsoba": "Dvije osobe",
+                "Cijena": 136.0
+            }
+        ],
+        "BrojZvjezdica": 4,
+        "Telefon": "+38522452452",
+        "Email": "recepcija@olympiavodice.hr"
+    },
+    {
+        "ImeHotela": "The Westin Zagreb",
+        "Ulica": "Krsnjavoga",
+        "KucniBroj": 1,
+        "PostanskiBroj": "10000",
+        "Grad": "Zagreb",
+        "Drzava": "Hrvatska",
+        "Soba": [
+            {
+                "brojOsoba": "Jedna osoba",
+                "Cijena": 129.0
+            },
+            {
+                "brojOsoba": "Dvije osobe",
+                "Cijena": 129.0
+            }
+        ],
+        "BrojZvjezdica": 5,
+        "Telefon": "+38552808896",
+        "Email": "westin.zagreb@westinzagreb.com"
+    },
+    {
+        "ImeHotela": "Hotel Dubrovnik",
+        "Ulica": "Ljudevita Gaja",
+        "KucniBroj": 1,
+        "PostanskiBroj": "10000",
+        "Grad": "Zagreb",
+        "Drzava": "Hrvatska",
+        "Soba": [
+            {
+                "brojOsoba": "Jedna osoba",
+                "Cijena": 139.91
+            },
+            {
+                "brojOsoba": "Dvije osobe",
+                "Cijena": 172.74
+            }
+        ],
+        "BrojZvjezdica": 4,
+        "Telefon": "+38514863512",
+        "Email": "info@hotel-dubrovnik.hr"
+    },
+    {
+        "ImeHotela": "Hotel Waldinger",
+        "Ulica": "Županijska ulica",
+        "KucniBroj": 8,
+        "PostanskiBroj": "31000",
+        "Grad": "Osijek",
+        "Drzava": "Hrvatska",
+        "Soba": [
+            {
+                "brojOsoba": "Jedna osoba",
+                "Cijena": 121.08
+            },
+            {
+                "brojOsoba": "Dvije osobe",
+                "Cijena": 145.0
+            }
+        ],
+        "BrojZvjezdica": 4,
+        "Telefon": "+38531250450",
+        "Email": "info@waldinger.hr"
+    },
+    {
+        "ImeHotela": "Hotel International",
+        "Ulica": "Miramarska",
+        "KucniBroj": 24,
+        "PostanskiBroj": "10000",
+        "Grad": "Zagreb",
+        "Drzava": "Hrvatska",
+        "Soba": [
+            {
+                "brojOsoba": "Jedna osoba",
+                "Cijena": 156.8
+            },
+            {
+                "brojOsoba": "Dvije osobe",
+                "Cijena": 156.8
+            }
+        ],
+        "BrojZvjezdica": 4,
+        "Telefon": "+38552808800",
+        "Email": "hello@maistra.hr"
+    }
+]

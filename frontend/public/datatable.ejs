@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablica hotela</title>
+   
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+    
+    <link rel="stylesheet" href="styletable.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="pogledaj">
+        <button id="gumb"> <a href="/" id="gumblink">VRATI SE NA POČETNU</a></button>
+        
+    
+        <select id="filterType">
+            <option value="sve">Wildcard</option>
+            <option value="hotel">Ime hotela</option>
+            <option value="grad">Grad</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Pretraži hotele">
+    </div>
+    
+
+    <table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>Ime hotela</th>
+                <th>Ulica</th>
+                <th>Kućni broj</th>
+                <th>Poštanski broj</th>
+                <th>Grad</th>
+                <th>Država</th>
+                <th>Broj osoba u sobi</th>
+                <th>Cijena</th>
+                <th>Broj zvjezdica</th>
+                <th>Kontakt telefon</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% rooms.forEach(room => { %>
+                <tr>
+                    <td><%= room.ime_hotela %></td>
+                    <td><%= room.ulica %></td>
+                    <td><%= room.kucni_broj %></td>
+                    <td><%= room.postanski_broj %></td>
+                    <td><%= room.grad %></td>
+                    <td><%= room.drzava %></td>
+                    <td><%= room.broj_osoba %></td>
+                    <td><%= room.cijena %></td>
+                    <td><%= room.brojzvjezdica %></td>
+                    <td><%= room.telefon %></td>
+                    <td><%= room.email %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    
+    
+
+
+
+</body>
+</html>
