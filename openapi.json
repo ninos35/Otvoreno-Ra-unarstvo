@@ -1,0 +1,259 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Hoteli u Hrvatskoj",
+        "version": "1.0"
+    },
+    "paths": {
+        "/hoteli": {
+            "get": {
+                "summary": "Dohvati sve hotele",
+                "description": "Vraća sve hotele",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Lista hotela",
+                        "schema": {
+                            "$ref": "./schema.json#/Resource"
+                        }
+                    },
+                    "404": {
+                        "description": "Hoteli nisu nađeni"
+                    }
+                }
+            }
+        },
+        "/hoteli/{id}": {
+            "get": {
+                "summary": "Dohvati hotel po ID-u",
+                "description": "Vraća jedan hotel",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID hotela",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Podaci o hotelu",
+                        "schema": {
+                            "$ref": "./schema.json#/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "ID mora biti broj"
+                    },
+                    "404": {
+                        "description": "Hotel nije nađen"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Dodaj hotel po ID-u",
+                "description": "Dodaje jedan hotel",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID hotela",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Dodavanje je uspješno",
+                        "schema": {
+                            "$ref": "./schema.json#/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Svi podaci su obavezni"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Osvježi hotel po ID-u",
+                "description": "Ažurira elemente postojećeg hotela",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID hotela",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "requestBody": {
+                    "description": "Podaci za ažuriranje hotela",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "./schema.json#/ResourceUpdate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Ažuriranje uspješno",
+                        "schema": {
+                            "$ref": "./schema.json#/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Svi podaci su obavezni"
+                    },
+                    "404": {
+                        "description": "Hotel nije nađen"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Obriši hotel po ID-u",
+                "description": "Briše jedan hotel",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID hotela",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Brisanje je uspješno",
+                        "schema": {
+                            "$ref": "./schema.json#/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Krivi ID"
+                    },
+                    "404": {
+                        "description": "Hotel nije nađen"
+                    }
+                }
+            }
+        },
+        "/hoteli/grad/{grad}": {
+            "get": {
+                "summary": "Dohvati hotele po gradu",
+                "description": "Vraća hotele u određenom gradu",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "grad",
+                        "in": "path",
+                        "description": "Naziv grada",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Lista hotela po gradu",
+                        "schema": {
+                            "$ref": "./schema.json#/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Grad mora biti tipa String"
+                    },
+                    "404": {
+                        "description": "Nema hotela u tom gradu"
+                    }
+                }
+            }
+        },
+        "/hoteli/zvjezdice/{brojZvjezdica}": {
+            "get": {
+                "summary": "Dohvati hotele po broju zvjezdica",
+                "description": "Vraća hotele s određenim brojem zvjezdica",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "brojZvjezdica",
+                        "in": "path",
+                        "description": "Broj zvjezdica hotela",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Lista hotela sa zadanim brojem zvjezdica",
+                        "schema": {
+                            "$ref": "./schema.json#/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Neispravno unesen broj zvjezdica"
+                    },
+                    "404": {
+                        "description": "Nema hotela sa zadanim brojem zvjezdica"
+                    }
+                }
+            }
+        },
+        "/hoteli/postanskiBroj/{postanskiBroj}": {
+            "get": {
+                "summary": "Dohvati hotele po poštanskom broju",
+                "description": "Vraća hotele na određenom poštanskom broju",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "postanskiBroj",
+                        "in": "path",
+                        "description": "Poštanski broj grada",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Lista hotela na određenom poštanskom broju",
+                        "schema": {
+                            "$ref": "./schema.json#/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Neispravno unesen poštanski broj"
+                    },
+                    "404": {
+                        "description": "Nema hotela na tom poštanskom broju"
+                    }
+                }
+            }
+        }
+    }
+}
