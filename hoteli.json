@@ -1,11 +1,15 @@
 [
     {
+        "@context": "https://schema.org/",
+        "@type": "Hotel",
         "ImeHotela": "Hotel Osijek",
-        "Ulica": "Šamačka",
-        "KucniBroj": 4,
-        "PostanskiBroj": "31000",
-        "Grad": "Osijek",
-        "Drzava": "Hrvatska",
+        "Adresa": {
+            "@type": "PostalAddress",
+            "streetAddress": "Šamačka 4",
+            "postalCode": "31000",
+            "addressLocality": "Osijek",
+            "addressCountry": "Hrvatska"
+        },
         "Soba": [
             {
                 "brojOsoba": "Jedna osoba",
@@ -21,12 +25,16 @@
         "Email": "info@hotelosijek.hr"
     },
     {
+        "@context": "https://schema.org/",
+        "@type": "Hotel",
         "ImeHotela": "Hotel Luxe Split",
-        "Ulica": "Ul.kralja Zvonimira",
-        "KucniBroj": 6,
-        "PostanskiBroj": "21000",
-        "Grad": "Split",
-        "Drzava": "Hrvatska",
+        "Adresa": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ul.kralja Zvonimira 6",
+            "postalCode": "21000",
+            "addressLocality": "Split",
+            "addressCountry": "Hrvatska"
+        },
         "Soba": [
             {
                 "brojOsoba": "Jedna osoba",
@@ -42,12 +50,16 @@
         "Email": "reservations@hotelluxesplit.com"
     },
     {
+        "@context": "https://schema.org/",
+        "@type": "Hotel",
         "ImeHotela": "Hotel Olympia",
-        "Ulica": "Ljudevita Gaja",
-        "KucniBroj": 6,
-        "PostanskiBroj": "22211",
-        "Grad": "Vodice",
-        "Drzava": "Hrvatska",
+        "Adresa": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ljudevita Gaja 6",
+            "postalCode": "22211",
+            "addressLocality": "Vodice",
+            "addressCountry": "Hrvatska"
+        },
         "Soba": [
             {
                 "brojOsoba": "Jedna osoba",
@@ -63,12 +75,16 @@
         "Email": "recepcija@olympiavodice.hr"
     },
     {
+        "@context": "https://schema.org/",
+        "@type": "Hotel",
         "ImeHotela": "Admiral Hotel",
-        "Ulica": "Rudeška Cesta",
-        "KucniBroj": 140,
-        "PostanskiBroj": "10000",
-        "Grad": "Zagreb",
-        "Drzava": "Hrvatska",
+        "Adresa": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rudeška Cesta 140",
+            "postalCode": "10000",
+            "addressLocality": "Zagreb",
+            "addressCountry": "Hrvatska"
+        },
         "Soba": [
             {
                 "brojOsoba": "Jedna osoba",
@@ -84,12 +100,16 @@
         "Email": "info@admiralhotel.hr"
     },
     {
+        "@context": "https://schema.org/",
+        "@type": "Hotel",
         "ImeHotela": "Hotel Split Inn by President",
-        "Ulica": "4. Gardijske Brigade",
-        "KucniBroj": 55,
-        "PostanskiBroj": "21000",
-        "Grad": "Split",
-        "Drzava": "Hrvatska",
+        "Adresa": {
+            "@type": "PostalAddress",
+            "streetAddress": "4. Gardijske Brigade 55",
+            "postalCode": "21000",
+            "addressLocality": "Split",
+            "addressCountry": "Hrvatska"
+        },
         "Soba": [
             {
                 "brojOsoba": "Jedna osoba",
@@ -105,12 +125,16 @@
         "Email": "splitinn@hotelpresident.hr"
     },
     {
+        "@context": "https://schema.org/",
+        "@type": "Hotel",
         "ImeHotela": "Hotel Olympia Sky",
-        "Ulica": "Ljudevita Gaja",
-        "KucniBroj": 6,
-        "PostanskiBroj": "22211",
-        "Grad": "Vodice",
-        "Drzava": "Hrvatska",
+        "Adresa": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ljudevita Gaja 6",
+            "postalCode": "22211",
+            "addressLocality": "Vodice",
+            "addressCountry": "Hrvatska"
+        },
         "Soba": [
             {
                 "brojOsoba": "Jedna osoba",
@@ -126,12 +150,16 @@
         "Email": "recepcija@olympiavodice.hr"
     },
     {
+        "@context": "https://schema.org/",
+        "@type": "Hotel",
         "ImeHotela": "The Westin Zagreb",
-        "Ulica": "Krsnjavoga",
-        "KucniBroj": 1,
-        "PostanskiBroj": "10000",
-        "Grad": "Zagreb",
-        "Drzava": "Hrvatska",
+        "Adresa": {
+            "@type": "PostalAddress",
+            "streetAddress": "Krsnjavoga 1",
+            "postalCode": "10000",
+            "addressLocality": "Zagreb",
+            "addressCountry": "Hrvatska"
+        },
         "Soba": [
             {
                 "brojOsoba": "Jedna osoba",
@@ -147,12 +175,16 @@
         "Email": "westin.zagreb@westinzagreb.com"
     },
     {
+        "@context": "https://schema.org/",
+        "@type": "Hotel",
         "ImeHotela": "Hotel Dubrovnik",
-        "Ulica": "Ljudevita Gaja",
-        "KucniBroj": 1,
-        "PostanskiBroj": "10000",
-        "Grad": "Zagreb",
-        "Drzava": "Hrvatska",
+        "Adresa": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ljudevita Gaja 1",
+            "postalCode": "10000",
+            "addressLocality": "Zagreb",
+            "addressCountry": "Hrvatska"
+        },
         "Soba": [
             {
                 "brojOsoba": "Jedna osoba",
@@ -168,12 +200,16 @@
         "Email": "info@hotel-dubrovnik.hr"
     },
     {
+        "@context": "https://schema.org/",
+        "@type": "Hotel",
         "ImeHotela": "Hotel Waldinger",
-        "Ulica": "Županijska ulica",
-        "KucniBroj": 8,
-        "PostanskiBroj": "31000",
-        "Grad": "Osijek",
-        "Drzava": "Hrvatska",
+        "Adresa": {
+            "@type": "PostalAddress",
+            "streetAddress": "Županijska ulica 8",
+            "postalCode": "31000",
+            "addressLocality": "Osijek",
+            "addressCountry": "Hrvatska"
+        },
         "Soba": [
             {
                 "brojOsoba": "Jedna osoba",
@@ -189,12 +225,16 @@
         "Email": "info@waldinger.hr"
     },
     {
+        "@context": "https://schema.org/",
+        "@type": "Hotel",
         "ImeHotela": "Hotel International",
-        "Ulica": "Miramarska",
-        "KucniBroj": 24,
-        "PostanskiBroj": "10000",
-        "Grad": "Zagreb",
-        "Drzava": "Hrvatska",
+        "Adresa": {
+            "@type": "PostalAddress",
+            "streetAddress": "Miramarska 24",
+            "postalCode": "10000",
+            "addressLocality": "Zagreb",
+            "addressCountry": "Hrvatska"
+        },
         "Soba": [
             {
                 "brojOsoba": "Jedna osoba",
