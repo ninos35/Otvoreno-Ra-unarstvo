@@ -1,6 +1,7 @@
 #glavni{
     display: grid;
     grid-template-columns: 70% 30%;
+    grid-template-rows: 20% 80%;
     justify-content: center;
 
 }
@@ -10,41 +11,17 @@
     grid-template-rows: repeat(auto,10);
     font-size: large;
 }
-#desni{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
 #veliki{
     border: 1px solid black;
     padding: 10px;
     height: 100px;
     width: 300px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto;
     background-color: cornflowerblue;
     align-items: center;
     font-size: large;
-}
-#pogledaj{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-#gumb{
-    height: 50px;
-    background-color: cadetblue;
-    border-radius: 10px;
-}
-#gumblink{
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-
-#tekst{
-    grid-area: 1/1/2/3;
 }
 body{
     background-color: lightblue;

@@ -7,36 +7,31 @@
     <title>Hoteli u Hrvatskoj</title>
     <meta name="description" content="Podaci o nekim hotelima u Hrvatskoj.">
     <meta name="author" content="Nino Salai">
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- pokretanje servera : npm run devStart -->
     <div id="glavni">
         <div id="readme">
             <h1>Hoteli u Hrvatskoj</h1>
-           <li>verzija: 3.0</li>
-           <li>Atributi: 
-            <ol>
-                <li>Naziv hotela</li>
-                <li>Ulica hotela</li>
-                <li>Kucni broj</li>
-                <li>Postanski broj</li>
-                <li>Grad</li>
-                <li>Drzava</li>
-                <li>Soba - veza roditelj-dijete, svaka soba ima određen broj osoba (jedna ili dvije osobe) te cijenu u €</li>
-                <li>Broj zvjezdica</li>
-                <li>Telefon</li>
-                <li>Email</li>
-            </ol>
+            <li>verzija: 4.0</li>
+           
+            <div>
+            <a href="/login" id="loginlink">Prijava</a>
+            <a href="/logout" id="logoutlink" style="display: none;">Odjava</a>
+            <a href="/profile" id="profilelink" style="display: none;">Korisnički profil</a>
+            <a href="/refresh" id="refreshlink" style="display: none;">Osvježi preslike</a>
+            </div>
             
-            <li>Metode:
-                <ol>
-                    <li>/hoteli - svi hoteli</li>
-                    <li>/hoteli/{id} - GET, POST, PUT ,DELETE</li>
-                    <li>/hoteli/grad/{grad} - GET</li>
-                    <li>/hoteli/zvjezdice/{brojZvjezdica} - GET</li>
-                    <li>/hoteli/postanskiBroj/{postanskiBroj} - GET</li>
-                </ol>
-            </li>
+        </div>
+        <div id="veliki">
+            <div id="tekst">Preuzmi podatke u željenom obliku:</div>
+            <div id="filec"><a href="hoteli.csv" download="hoteli.csv">Hoteli.csv</a></div>
+            <div id="filej"><a href="hoteli.json" download="hoteli.json">Hoteli.json</a></div>
+        </div>
+        <div id="jsonlist"></div>
+        <div id="csvlist">
+
         </div>
     </div>
     </div>
