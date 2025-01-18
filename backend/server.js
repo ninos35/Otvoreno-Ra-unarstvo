@@ -1,18 +1,28 @@
 const express = require("express");
-const app = express();
+const { auth } = require("express-openid-connect");
+const session = require("express-session");
 const path = require("path");
 
-app.set("views", path.join(__dirname, "../frontend/public"));
-app.set("view engine", "ejs");
+const app = express();
+
+// Auth0 konfiguracija
+const config = {
+  authRequired: false, 
+  auth0Logout: true,
+  secret: "SN0PVtX24Kb_2nrZUtUeGPxFtEDfynaBDpYUxe_iPhWebGo5Ed6efFzVIKCAKEai",
+  baseURL: "http://localhost:3000",
+  clientID: "nILVl2ryHpW6sKSmT5bl73srUVJlsEtv",
+  issuerBaseURL: "https://dev-c064jugao1g4cdru.us.auth0.com",
+  
+};
+
+
+app.use(auth(config));
+
 
 app.use(express.static(path.join(__dirname, "../frontend/public")));
 
-app.get("/", (req, res) => {
-    console.log("here");
-    res.render("index");
-});
 
-app.use(express.json());
 
 const { Client } = require("pg");
 
@@ -32,6 +42,83 @@ client.connect((err) => {
     }
 });
 
+
+
+app.use(
+    session({
+      secret: "SN0PVtX24Kb_2nrZUtUeGPxFtEDfynaBDpYUxe_iPhWebGo5Ed6efFzVIKCAKEai", 
+      resave: false,
+      saveUninitialized: true,
+      cookie: {
+        httpOnly: true, 
+        secure: true, 
+        sameSite: "None", 
+        maxAge: 3600000, // 1h
+      },
+    })
+  );
+
+app.use((req,res,next)=>{
+    res.locals.user=req.user || null;
+    next();
+})
+
+
+
+app.get("/", (req, res) => {
+ 
+  res.sendFile(path.join(__dirname, "../frontend/public/index.html"));
+});
+
+
+
+
+app.get("/login", (req, res) => {
+
+    
+
+    res.oidc.login();
+});
+
+
+app.get("/logout", (req, res) => {
+    if (!req.oidc.isAuthenticated()) {
+        return res.status(401).send("Greška! Nisi prijavljen, pa se ne možeš ni odjaviti");
+      }
+   
+  res.oidc.logout();
+});
+
+
+app.get("/profile", (req, res) => {
+  if (!req.oidc.isAuthenticated()) {
+    return res.status(401).send("Greška! Nisi prijavljen");
+  }
+  res.json(req.oidc.user);
+  
+});
+
+app.get("/refresh", (req, res) => {
+
+    if (!req.oidc.isAuthenticated()) {
+        return res.status(401).send("Greška! Nisi prijavljen");
+      }
+
+    client.query(
+        "SELECT h.id, ime_hotela, ulica, kucni_broj, postanski_broj, grad, drzava, brojzvjezdica, telefon, email FROM hotel h ",
+        (err, dbRes) => {
+            if (!err) {
+                res.status(200).json(respWrapper("success", "Hoteli", dbRes.rows));
+            } else {
+                console.log(err.message);
+                res.status(404).json(respWrapper("error", "Hoteli nisu nađeni"));
+            }
+        }
+    );
+});
+
+
+  
 // omotač za statuse
 const respWrapper = (status, message, data = null) => {
     return { status, message, data };
@@ -39,7 +126,7 @@ const respWrapper = (status, message, data = null) => {
 
 app.get("/hoteli", (req, res) => {
     client.query(
-        "SELECT h.id, ime_hotela, ulica, kucni_broj, postanski_broj, grad, drzava, broj_osoba, cijena, brojzvjezdica, telefon, email, s.id as soba_id FROM hotel h JOIN sobe s ON h.id=s.hotel_id",
+        "SELECT h.id, ime_hotela, ulica, kucni_broj, postanski_broj, grad, drzava, brojzvjezdica, telefon, email FROM hotel h ",
         (err, dbRes) => {
             if (!err) {
                 res.status(200).json(respWrapper("success", "Lista hotela", dbRes.rows));
@@ -59,7 +146,7 @@ app.get("/hoteli/:id", (req, res) => {
     }
 
     client.query(
-        "SELECT h.id, ime_hotela, ulica, kucni_broj, postanski_broj, grad, drzava, broj_osoba, cijena, brojzvjezdica, telefon, email, s.id as soba_id FROM hotel h JOIN sobe s ON h.id=s.hotel_id WHERE h.id = $1",
+        "SELECT h.id, ime_hotela, ulica, kucni_broj, postanski_broj, grad, drzava, brojzvjezdica, telefon, email FROM hotel h  WHERE h.id = $1",
         [hotelId],
         (err, dbRes) => {
             if (err) {
@@ -91,8 +178,8 @@ app.post("/hoteli/:id", (req, res) => {
     const values = [ imehotela, ulica, kucnibroj, postanski_broj , grad, drzava, brojzvjezdica, telefon, email ];
 
     client.query(
-        "INSERT INTO hotel (ime_hotela, ulica, kucni_broj, postanski_broj, grad, drzava, brojzvjezdica, telefon, email) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *",
-        values,
+        "INSERT INTO hotel (id,ime_hotela, ulica, kucni_broj, postanski_broj, grad, drzava, brojzvjezdica, telefon, email) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *",
+        [hotelId,...values],
         (err, dbRes) => {
             if (err) {
                 console.log(err.message);
@@ -241,4 +328,7 @@ app.all("*",(req,res)=>{
     return res.status(501).json(respWrapper("Not Implemented","Method not implemented for requested resource",null))
 })
 
-app.listen(3000);
+
+app.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
+});
